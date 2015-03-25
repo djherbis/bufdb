@@ -1,5 +1,8 @@
-BufDB [![GoDoc](https://godoc.org/github.com/djherbis/bufdb?status.svg)](https://godoc.org/github.com/djherbis/bufdb)
+BufDB 
 ==========
+
+[![GoDoc](https://godoc.org/github.com/djherbis/bufdb?status.svg)](https://godoc.org/github.com/djherbis/bufdb)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.txt)
 
 Usage
 ------------

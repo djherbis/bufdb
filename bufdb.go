@@ -35,10 +35,8 @@ func (s *BufferStore) Pull(key []byte) (b buffer.Buffer, err error) {
 // DeleteAll will call Reset() on every buffer managed by this store,
 // and then delete the buffer from the store.
 func (s *BufferStore) DeleteAll() error {
-	s.buffers.ForEach(func(i interface{}) {
-		if b, ok := i.(buffer.Buffer); ok {
-			b.Reset()
-		}
+	s.buffers.ForEach(func(b buffer.Buffer) {
+		b.Reset()
 	})
 	return s.buffers.DeleteAll()
 }

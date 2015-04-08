@@ -3,7 +3,6 @@ BufDB
 
 [![GoDoc](https://godoc.org/github.com/djherbis/bufdb?status.svg)](https://godoc.org/github.com/djherbis/bufdb)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.txt)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.txt)
 [![Build Status](https://travis-ci.org/djherbis/bufdb.svg?branch=master)](https://travis-ci.org/djherbis/bufdb) 
 [![Coverage Status](https://coveralls.io/repos/djherbis/bufdb/badge.svg?branch=master)](https://coveralls.io/r/djherbis/bufdb?branch=master)
 

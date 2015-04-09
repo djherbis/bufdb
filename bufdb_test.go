@@ -11,11 +11,11 @@ import (
 )
 
 func TestBufferPoolStore(t *testing.T) {
-	db, err := bolt.Open("my.db", 0600, nil)
+	db, err := bolt.Open("my1.db", 0600, nil)
 	if err != nil {
 		t.Error(err.Error())
 	}
-	defer os.Remove("my.db")
+	defer os.Remove("my1.db")
 	defer db.Close()
 
 	store := NewBufferPoolStore(db, []byte("pools"))
@@ -41,11 +41,11 @@ func TestBufferPoolStore(t *testing.T) {
 }
 
 func TestBufferStore(t *testing.T) {
-	db, err := bolt.Open("my.db", 0600, nil)
+	db, err := bolt.Open("my2.db", 0600, nil)
 	if err != nil {
 		t.Error(err.Error())
 	}
-	defer os.Remove("my.db")
+	defer os.Remove("my2.db")
 	defer db.Close()
 
 	store := NewBufferStore(db, []byte("buckets"))

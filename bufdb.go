@@ -21,7 +21,7 @@ func NewBufferStore(db *bolt.DB, bucket []byte) *BufferStore {
 // Put persists buffer.Buffer b, modifying b after Put will not affect the stored buffer.
 // This will fail if the buffer is not gob-encodable.
 func (s *BufferStore) Put(key []byte, b buffer.Buffer) error {
-	return s.buffers.Put(key, b)
+	return s.buffers.Put(key, &b)
 }
 
 // Pull will retrive (and removes) the buffer stored under "key".
@@ -50,7 +50,7 @@ func NewBufferPoolStore(db *bolt.DB, bucket []byte) *BufferPoolStore {
 }
 
 func (s *BufferPoolStore) Put(key []byte, p buffer.Pool) error {
-	return s.pools.Put(key, p)
+	return s.pools.Put(key, &p)
 }
 
 func (s *BufferPoolStore) Pull(key []byte) (p buffer.Pool, err error) {

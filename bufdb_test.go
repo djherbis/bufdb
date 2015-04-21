@@ -23,7 +23,10 @@ func TestBufferPoolStore(t *testing.T) {
 	key := []byte("hello")
 
 	pool := buffer.NewFilePool(10, ".")
-	b := pool.Get()
+	b, err := pool.Get()
+	if err != nil {
+		t.Error(err)
+	}
 	b.Write([]byte("hello world"))
 
 	store.Put(key, pool)

@@ -2,9 +2,10 @@
 package bufdb
 
 import (
-	"github.com/boltdb/bolt"
 	"github.com/djherbis/buffer"
 	"github.com/djherbis/stow"
+
+	bolt "go.etcd.io/bbolt"
 )
 
 // BufferStore manages buffer.Buffer persistance.

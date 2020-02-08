@@ -18,8 +18,9 @@ import (
   "os"
   "testing"
 
-  "github.com/boltdb/bolt"
   "github.com/djherbis/buffer"
+
+  bolt "go.etcd.io/bbolt"
 )
 
 func TestStore(t *testing.T) {
